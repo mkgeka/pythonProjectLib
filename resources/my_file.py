@@ -4,4 +4,4 @@ def all(iterable):
         if not element:
             return False
     return True
-all(1)
+all("a")
