@@ -1,13 +1,15 @@
 #!/usr/bin/env python
-from typing import List
+from typing import Any, Dict, List, Set
 
-def check(row_start:int, row_end:int, column_start:int, column_end:int) -> List[List[int]]:
-    M = [[*range(row_start, row_end+1, 1)], [*range(column_start, column_end+1, 1)]]
-    list = []
-    for i in M[0]:
-        Result = [item * i for item in M[1]]
-        list.append(Result)
+def check(lst: List[Dict[Any, Any]]) -> Set[Any]:
+    my_list2 = []
+    for x in lst:
+        my_list = []
+        for i in x.values():
+            my_list.append(i)
+        my_list2.append(my_list[0])
+    set(my_list2)
     pass
-    return list
+    return set(my_list2)
 output = check(2,4,3,7)
 print(output)
