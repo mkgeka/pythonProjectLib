@@ -1,3 +1,7 @@
 #!/usr/bin/env python
-import glob
-print(glob.glob("*"))
+def all(iterable):
+    for element in iterable:
+        if not element:
+            return False
+    return True
+all(1)
