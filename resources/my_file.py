@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 def all(iterable):
     for element in iterable:
-        if not element:
-            return False
-    return True
-output = all("a")
+        print(element)
+        element += 1
+    return element
+output = all(50)
 print(output)
