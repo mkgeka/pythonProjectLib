@@ -2,8 +2,8 @@
 def all(iterable):
     element = 0
     for element in range(1,iterable):
-        #print(element)
         element = element + element
+        print(element)
     return element
 output = all(50)
 print(output)
