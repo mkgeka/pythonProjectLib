@@ -2,5 +2,5 @@
 def replacer(s):
     s = s[0]
     return s
-output = 'Hello World!!!'
+output = replacer('Hello World!!!')
 print(output)
