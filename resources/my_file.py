@@ -1,15 +1,20 @@
 #!/usr/bin/env python
-from typing import Any, Dict, List, Set
+from typing import Union, List
 
-def check(lst: List[Dict[Any, Any]]) -> Set[Any]:
-    my_list2 = []
-    for x in lst:
-        my_list = []
-        for i in x.values():
-            my_list.append(i)
-        my_list2.append(my_list[0])
-    set(my_list2)
-    pass
-    return set(my_list2)
-output = check(2,4,3,7)
+ListType = List[Union[int, str]]
+
+
+def get_fizzbuzz_list(n: int) -> ListType:
+    even_numbers = []
+    for i in range(1, n+1):
+        if i % 3 == 0 and i % 5 == 0:
+            even_numbers.append("FizzBuzz")
+        elif i % 3 == 0:
+            even_numbers.append("Fizz")
+        elif i % 5 == 0:
+            even_numbers.append("Buzz")
+        else:
+            even_numbers.append(i)
+    return even_numbers
+output = get_fizzbuzz_list(5)
 print(output)
