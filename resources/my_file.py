@@ -2,7 +2,7 @@
 def all(iterable):
     element = 0
     for element in range(1,iterable):
-        melement = element + element
+        melement = melement + element
         print(melement)
     return melement
 output = all(50)
