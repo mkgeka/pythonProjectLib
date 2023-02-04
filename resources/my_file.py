@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 def all(iterable):
-    melement = 0
+    melement = 1
     for element in range(1,iterable):
         print(element)
         melement = melement * element
