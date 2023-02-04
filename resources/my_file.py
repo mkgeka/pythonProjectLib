@@ -1,5 +1,3 @@
 #!/usr/bin/env python
-def replacer(s: str) -> str:
-    return s
-output = replacer('Hello World!!!')
+output = 'Hello World!!!'
 print(output)
