@@ -5,5 +5,5 @@ def all(iterable):
         print(element)
         melement = melement + element
     return melement
-output = all(10000000)
+output = all(10)
 print(output)
