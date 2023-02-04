@@ -1,20 +1,15 @@
 #!/usr/bin/env python
-from typing import Union, List
-
-ListType = List[Union[int, str]]
-
-
-def get_fizzbuzz_list(n: int) -> ListType:
-    even_numbers = []
-    for i in range(1, n+1):
-        if i % 3 == 0 and i % 5 == 0:
-            even_numbers.append("FizzBuzz")
-        elif i % 3 == 0:
-            even_numbers.append("Fizz")
-        elif i % 5 == 0:
-            even_numbers.append("Buzz")
+def replacer(s: str) -> str:
+    message = ""
+    for symbol in s:
+        if symbol.find("\"") != -1:
+            character = symbol.replace("\"", "\'")
+            message = message + character
+        elif symbol.find("\'") != -1:
+            character = symbol.replace("\'", "\"")
+            message = message + character
         else:
-            even_numbers.append(i)
-    return even_numbers
-output = get_fizzbuzz_list(5)
+            message = message + symbol
+    return message
+output = replacer('\'"\'\'"\'\'"\'\'"\'\'"\'\'"\'\'"\'')
 print(output)
