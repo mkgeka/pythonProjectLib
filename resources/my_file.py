@@ -3,7 +3,7 @@ def all(iterable):
     element = 0
     for element in range(1,iterable):
         #print(element)
-        element += 1
+        element = element + element
     return element
 output = all(50)
 print(output)
