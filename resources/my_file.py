@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-def replacer(s):
-    a = s[0]
-    b = s[6]
+def replacer(a,b):
     return a+b
-output = replacer('Hello World!!!')
+output = replacer(1,2)
 print(output)
